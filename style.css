@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  --deskly-orange: #FF7340;
+  --deskly-orange-hover: #E85D2A;
+  --deskly-surface: #F9FAFB;
+  --deskly-card: #FFFFFF;
+  --deskly-ink: #111827;
+  --deskly-text: #4B5563;
+  --deskly-border: #E5E7EB;
+  --deskly-accent-blue: #3B82F6;
+  --deskly-accent-green: #10B981;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--deskly-surface);
+  color: var(--deskly-text);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--deskly-ink);
+}
+
+/* Card hover lifts for a modern feel */
+.lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08);
+}
+
+/* Nav links indicator - Deskly style */
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: var(--deskly-text);
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: var(--deskly-ink);
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--deskly-orange);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+.nav-link.active {
+  color: var(--deskly-orange);
+}
+
+/* Mobile menu transition */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#mobile-menu.open {
+  max-height: 520px;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--deskly-orange);
+  outline-offset: 2px;
+}
+
+/* Subtle pattern background for sections */
+.bg-pattern {
+  background-image: radial-gradient(var(--deskly-border) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

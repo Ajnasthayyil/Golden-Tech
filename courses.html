@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses & Training | Golden Tech Group</title>
+<meta name="description" content="Typing, documentation and software courses at Golden Tech's Kerala training institute, with paid interview placement support for UAE roles.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'deskly-orange': '#FF7340',
+          'deskly-orange-hover': '#E85D2A',
+          'deskly-surface': '#F9FAFB',
+          'deskly-card': '#FFFFFF',
+          'deskly-ink': '#111827',
+          'deskly-text': '#4B5563',
+          'deskly-border': '#E5E7EB',
+          'deskly-accent-blue': '#3B82F6',
+          'deskly-accent-green': '#10B981'
+        },
+        fontFamily: {
+          display: ['Plus Jakarta Sans', 'sans-serif'],
+          body: ['Inter', 'sans-serif']
+        },
+        boxShadow: {
+          'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+          'hover': '0 20px 40px -15px rgba(0, 0, 0, 0.08)'
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body bg-deskly-surface text-deskly-text">
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-deskly-border">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-20">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-xl bg-deskly-orange/10 flex items-center justify-center shrink-0">
+        <span class="font-display text-deskly-orange text-xl font-bold">G</span>
+      </span>
+      <span class="flex flex-col leading-none">
+        <span class="font-display text-deskly-ink text-lg font-bold tracking-tight">Golden Tech</span>
+        <span class="font-body text-deskly-text text-[10px] uppercase font-semibold tracking-widest mt-1">Kerala &middot; U.A.E</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-deskly-text">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="courses.html" class="nav-link active">Courses</a>
+      <a href="faculty.html" class="nav-link">Faculty</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="hidden lg:block">
+      <a href="enquiry.html" class="inline-flex items-center gap-2 bg-deskly-orange text-white font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-deskly-orange-hover shadow-sm hover:shadow-md transition-all">Student Enquiry</a>
+    </div>
+    <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden text-deskly-ink p-2">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h18M4 13h18M4 19h18"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="lg:hidden bg-white border-t border-deskly-border">
+    <div class="px-5 py-4 flex flex-col gap-4 font-medium text-deskly-text">
+      <a href="index.html" class="hover:text-deskly-ink">Home</a>
+      <a href="about.html" class="hover:text-deskly-ink">About</a>
+      <a href="courses.html" class="text-deskly-orange">Courses</a>
+      <a href="faculty.html" class="hover:text-deskly-ink">Faculty</a>
+      <a href="careers.html" class="hover:text-deskly-ink">Careers</a>
+      <a href="contact.html" class="hover:text-deskly-ink">Contact</a>
+      <a href="enquiry.html" class="inline-block bg-deskly-orange text-white font-semibold text-center px-5 py-3 rounded-full mt-2">Student Enquiry</a>
+    </div>
+  </div>
+</header>
+
+<section class="bg-deskly-surface bg-pattern py-20 sm:py-28 border-b border-deskly-border">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center relative z-10">
+    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-deskly-border text-xs font-semibold text-deskly-orange mb-6 shadow-sm uppercase tracking-wider">
+      Courses &amp; Training
+    </span>
+    <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-deskly-ink leading-tight">Learn the exact skills UAE offices ask for</h1>
+    <p class="text-deskly-text mt-8 text-lg max-w-2xl mx-auto leading-relaxed">Every course is taught at our Kerala centre and priced individually. Fees are shared during enquiry so you know exactly what you're paying for, before you enrol.</p>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<section class="bg-white py-10 border-b border-deskly-border">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-wrap gap-4 justify-center" id="filter-bar">
+    <button data-filter="all" class="filter-btn active-filter bg-deskly-orange text-white border-deskly-orange px-6 py-2.5 rounded-full text-sm font-semibold border shadow-sm transition-all hover:shadow-md">All Courses</button>
+    <button data-filter="typing" class="filter-btn bg-white text-deskly-text border-deskly-border px-6 py-2.5 rounded-full text-sm font-semibold border hover:border-deskly-orange hover:text-deskly-orange transition-all">Typing</button>
+    <button data-filter="software" class="filter-btn bg-white text-deskly-text border-deskly-border px-6 py-2.5 rounded-full text-sm font-semibold border hover:border-deskly-orange hover:text-deskly-orange transition-all">Software &amp; Office</button>
+    <button data-filter="career" class="filter-btn bg-white text-deskly-text border-deskly-border px-6 py-2.5 rounded-full text-sm font-semibold border hover:border-deskly-orange hover:text-deskly-orange transition-all">Career Prep</button>
+  </div>
+</section>
+
+<!-- COURSE GRID -->
+<section class="py-24 bg-deskly-surface">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="course-grid">
+
+    <div class="course-card lift bg-white rounded-3xl p-8 border border-deskly-border shadow-soft flex flex-col h-full" data-cat="typing">
+      <span class="inline-block bg-deskly-orange/10 text-deskly-orange text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 w-max">TYPING</span>
+      <h3 class="font-display text-2xl font-bold text-deskly-ink">English Typing (Speed &amp; Accuracy)</h3>
+      <p class="text-deskly-text mt-4 leading-relaxed flex-grow">Keyboarding fundamentals building to 35–45 WPM with clean accuracy, for office and government roles.</p>
+      <div class="flex justify-between items-center text-sm font-medium text-deskly-text mt-6 pt-5 border-t border-deskly-border">
+        <span>6–8 weeks</span>
+        <span class="bg-deskly-surface px-3 py-1 rounded-full border border-deskly-border text-xs">In-person</span>
+      </div>
+    </div>
+
+    <div class="course-card lift bg-white rounded-3xl p-8 border border-deskly-border shadow-soft flex flex-col h-full" data-cat="typing">
+      <span class="inline-block bg-deskly-orange/10 text-deskly-orange text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 w-max">TYPING</span>
+      <h3 class="font-display text-2xl font-bold text-deskly-ink">Arabic Typing</h3>
+      <p class="text-deskly-text mt-4 leading-relaxed flex-grow">Arabic keyboard layout, script fundamentals, and formatting used in UAE government and legal documents.</p>
+      <div class="flex justify-between items-center text-sm font-medium text-deskly-text mt-6 pt-5 border-t border-deskly-border">
+        <span>8–10 weeks</span>
+        <span class="bg-deskly-surface px-3 py-1 rounded-full border border-deskly-border text-xs">In-person</span>
+      </div>
+    </div>
+
+    <div class="course-card lift bg-white rounded-3xl p-8 border border-deskly-border shadow-soft flex flex-col h-full" data-cat="typing">
+      <span class="inline-block bg-deskly-orange/10 text-deskly-orange text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 w-max">TYPING</span>
+      <h3 class="font-display text-2xl font-bold text-deskly-ink">UAE Government Document Typing</h3>
+      <p class="text-deskly-text mt-4 leading-relaxed flex-grow">Visa forms, labour contracts, tenancy contracts and Emirates ID paperwork — the exact formats used in the field.</p>
+      <div class="flex justify-between items-center text-sm font-medium text-deskly-text mt-6 pt-5 border-t border-deskly-border">
+        <span>4 weeks</span>
+        <span class="bg-deskly-surface px-3 py-1 rounded-full border border-deskly-border text-xs">In-person</span>
+      </div>
+    </div>
+
+    <div class="course-card lift bg-white rounded-3xl p-8 border border-deskly-border shadow-soft flex flex-col h-full" data-cat="software">
+      <span class="inline-block bg-deskly-accent-blue/10 text-deskly-accent-blue text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 w-max">SOFTWARE</span>
+      <h3 class="font-display text-2xl font-bold text-deskly-ink">Desktop Publishing (DTP)</h3>
+      <p class="text-deskly-text mt-4 leading-relaxed flex-grow">Page layout, formatting and document design skills used in print and documentation offices.</p>
+      <div class="flex justify-between items-center text-sm font-medium text-deskly-text mt-6 pt-5 border-t border-deskly-border">
+        <span>6 weeks</span>
+        <span class="bg-deskly-surface px-3 py-1 rounded-full border border-deskly-border text-xs">In-person</span>
+      </div>
+    </div>
+
+    <div class="course-card lift bg-white rounded-3xl p-8 border border-deskly-border shadow-soft flex flex-col h-full" data-cat="software">
+      <span class="inline-block bg-deskly-accent-blue/10 text-deskly-accent-blue text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 w-max">SOFTWARE</span>
+      <h3 class="font-display text-2xl font-bold text-deskly-ink">Tally ERP &amp; Basic Accounting</h3>
+      <p class="text-deskly-text mt-4 leading-relaxed flex-grow">Bookkeeping, invoicing, and inventory basics for office and accounts-assistant roles.</p>
+      <div class="flex justify-between items-center text-sm font-medium text-deskly-text mt-6 pt-5 border-t border-deskly-border">
+        <span>6 weeks</span>
+        <span class="bg-deskly-surface px-3 py-1 rounded-full border border-deskly-border text-xs">In-person</span>
+      </div>
+    </div>
+
+    <div class="course-card lift bg-white rounded-3xl p-8 border border-deskly-border shadow-soft flex flex-col h-full" data-cat="software">
+      <span class="inline-block bg-deskly-accent-blue/10 text-deskly-accent-blue text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 w-max">SOFTWARE</span>
+      <h3 class="font-display text-2xl font-bold text-deskly-ink">MS Office Essentials</h3>
+      <p class="text-deskly-text mt-4 leading-relaxed flex-grow">Word, Excel and Outlook skills for day-to-day office administration and documentation work.</p>
+      <div class="flex justify-between items-center text-sm font-medium text-deskly-text mt-6 pt-5 border-t border-deskly-border">
+        <span>4 weeks</span>
+        <span class="bg-deskly-surface px-3 py-1 rounded-full border border-deskly-border text-xs">In-person</span>
+      </div>
+    </div>
+
+    <div class="course-card lift bg-white rounded-3xl p-8 border border-deskly-border shadow-soft flex flex-col h-full" data-cat="career">
+      <span class="inline-block bg-deskly-accent-green/10 text-deskly-accent-green text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 w-max">CAREER PREP</span>
+      <h3 class="font-display text-2xl font-bold text-deskly-ink">Interview &amp; Soft Skills Prep</h3>
+      <p class="text-deskly-text mt-4 leading-relaxed flex-grow">Mock interviews, resume review and workplace communication for UAE typing and documentation roles.</p>
+      <div class="flex justify-between items-center text-sm font-medium text-deskly-text mt-6 pt-5 border-t border-deskly-border">
+        <span>2 weeks</span>
+        <span class="bg-deskly-surface px-3 py-1 rounded-full border border-deskly-border text-xs">In-person</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PLACEMENT SERVICE -->
+<section class="py-24 bg-white border-y border-deskly-border">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <span class="text-deskly-orange font-semibold tracking-wider uppercase text-sm">After Your Course</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-deskly-ink mt-4">Interview Placement Assistance</h2>
+      <p class="text-deskly-text mt-6 text-lg leading-relaxed">Once you complete training and pass your certification, we arrange interviews with our UAE partner offices for suitable typing and documentation roles. This is a <strong class="text-deskly-orange">separate, chargeable service</strong> — fees are quoted upfront, only after you're certified and ready to proceed.</p>
+      <a href="enquiry.html" class="inline-block mt-8 bg-deskly-ink text-white font-semibold px-8 py-4 rounded-full hover:bg-deskly-text shadow-soft transition-all text-lg">Ask About Placement</a>
+    </div>
+    <div class="bg-deskly-surface rounded-3xl p-10 border border-deskly-border shadow-soft">
+      <ul class="space-y-6 text-deskly-text">
+        <li class="flex gap-4">
+          <div class="w-8 h-8 rounded-full bg-deskly-orange text-white flex items-center justify-center font-bold shrink-0">1</div> 
+          <span class="leading-relaxed">Complete your chosen course and pass the final assessment.</span>
+        </li>
+        <li class="flex gap-4">
+          <div class="w-8 h-8 rounded-full bg-deskly-orange text-white flex items-center justify-center font-bold shrink-0">2</div> 
+          <span class="leading-relaxed">Confirm you'd like interview placement support and review the fee.</span>
+        </li>
+        <li class="flex gap-4">
+          <div class="w-8 h-8 rounded-full bg-deskly-orange text-white flex items-center justify-center font-bold shrink-0">3</div> 
+          <span class="leading-relaxed">We match you against current openings and schedule interviews.</span>
+        </li>
+        <li class="flex gap-4">
+          <div class="w-8 h-8 rounded-full bg-deskly-orange text-white flex items-center justify-center font-bold shrink-0">4</div> 
+          <span class="leading-relaxed">You attend the interview — placement is not guaranteed, but preparation and access to roles are.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-white border-b border-deskly-border">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center bg-deskly-surface rounded-3xl p-12 border border-deskly-border">
+    <h2 class="font-display text-3xl sm:text-4xl font-bold text-deskly-ink">Not sure which course fits you?</h2>
+    <p class="text-deskly-text mt-4 text-lg">Send us your enquiry and we'll recommend a course based on your goals and current skill level.</p>
+    <a href="enquiry.html" class="inline-block mt-8 bg-deskly-orange text-white font-semibold px-10 py-4 rounded-full hover:bg-deskly-orange-hover shadow-soft hover:shadow-hover transition-all text-lg">Submit Student Enquiry</a>
+  </div>
+</section>
+
+<footer class="bg-white border-t border-deskly-border pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid gap-10 md:grid-cols-4 mb-16">
+    <div>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="w-10 h-10 rounded-xl bg-deskly-orange/10 flex items-center justify-center shrink-0">
+          <span class="font-display text-deskly-orange text-lg font-bold">G</span>
+        </span>
+        <span class="font-display text-deskly-ink text-base font-bold">Golden Tech Group</span>
+      </div>
+      <p class="text-sm leading-relaxed text-deskly-text">Documentation, typing and travel services connecting Kerala and the U.A.E — plus the training that gets you ready for what's next.</p>
+      <div class="flex gap-4 mt-6">
+        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-deskly-surface border border-deskly-border flex items-center justify-center text-deskly-text hover:text-deskly-orange hover:border-deskly-orange transition-colors">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-deskly-surface border border-deskly-border flex items-center justify-center text-deskly-text hover:text-deskly-orange hover:border-deskly-orange transition-colors">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-display font-bold text-deskly-ink mb-6 text-sm tracking-widest uppercase">Quick Links</h4>
+      <ul class="space-y-4 text-sm text-deskly-text">
+        <li><a href="about.html" class="hover:text-deskly-orange font-medium transition-colors">About Us</a></li>
+        <li><a href="courses.html" class="hover:text-deskly-orange font-medium transition-colors">Courses &amp; Training</a></li>
+        <li><a href="faculty.html" class="hover:text-deskly-orange font-medium transition-colors">Faculty</a></li>
+        <li><a href="careers.html" class="hover:text-deskly-orange font-medium transition-colors">Careers</a></li>
+        <li><a href="enquiry.html" class="hover:text-deskly-orange font-medium transition-colors">Student Enquiry</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-bold text-deskly-ink mb-6 text-sm tracking-widest uppercase">Kerala Branch</h4>
+      <p class="text-sm text-deskly-text leading-relaxed font-medium">Golden Tech Travels &amp; Tourism<br>2nd Floor, MG Road<br>Kozhikode, Kerala 673001<br>+91 98XXX XXXXX</p>
+    </div>
+    <div>
+      <h4 class="font-display font-bold text-deskly-ink mb-6 text-sm tracking-widest uppercase">U.A.E Branch</h4>
+      <p class="text-sm text-deskly-text leading-relaxed font-medium">Golden Tech Documentation Services<br>Al Ain, Abu Dhabi, U.A.E<br>+971 5X XXX XXXX<br>info@goldentechgroup.ae</p>
+    </div>
+  </div>
+  <div class="border-t border-deskly-border pt-8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-deskly-text font-medium">
+      <p>&copy; <span data-year></span> Golden Tech Group. All rights reserved.</p>
+      <p class="flex gap-6"><a href="#" class="hover:text-deskly-orange transition-colors">Privacy Policy</a><a href="#" class="hover:text-deskly-orange transition-colors">Terms of Service</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.course-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('active-filter','bg-deskly-orange','text-white','border-deskly-orange');
+        b.classList.add('bg-white','text-deskly-text','border-deskly-border');
+      });
+      btn.classList.remove('bg-white','text-deskly-text','border-deskly-border');
+      btn.classList.add('active-filter','bg-deskly-orange','text-white','border-deskly-orange');
+      
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.cat === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
