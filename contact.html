@@ -11,22 +11,22 @@
     theme: {
       extend: {
         colors: {
-          'deskly-orange': '#FF7340',
-          'deskly-orange-hover': '#E85D2A',
-          'deskly-surface': '#F9FAFB',
+          'deskly-orange': '#FF7340', // Kept for legacy
+          'deskly-lime': '#C4F032', // The new lime green from the screenshot
+          'deskly-lime-hover': '#b5e024',
+          'deskly-surface': '#F4F5F5',
           'deskly-card': '#FFFFFF',
-          'deskly-ink': '#111827',
-          'deskly-text': '#4B5563',
-          'deskly-border': '#E5E7EB',
-          'deskly-accent-blue': '#3B82F6',
-          'deskly-accent-green': '#10B981'
+          'deskly-ink': '#0F172A',
+          'deskly-ink-light': '#1E293B',
+          'deskly-text': '#475569',
+          'deskly-border': '#E2E8F0',
         },
         fontFamily: {
           display: ['Plus Jakarta Sans', 'sans-serif'],
           body: ['Inter', 'sans-serif']
         },
         boxShadow: {
-          'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+          'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.05)',
           'hover': '0 20px 40px -15px rgba(0, 0, 0, 0.08)'
         }
       }
@@ -40,24 +40,28 @@
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-deskly-border">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-20">
     <a href="index.html" class="flex items-center gap-3">
-      <span class="w-11 h-11 rounded-xl bg-deskly-orange/10 flex items-center justify-center shrink-0">
-        <span class="font-display text-deskly-orange text-xl font-bold">G</span>
+      <span class="w-11 h-11 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-none bg-deskly-ink flex items-center justify-center shrink-0">
+        <span class="font-display text-white text-xl font-bold">G</span>
       </span>
       <span class="flex flex-col leading-none">
         <span class="font-display text-deskly-ink text-lg font-bold tracking-tight">Golden Tech</span>
-        <span class="font-body text-deskly-text text-[10px] uppercase font-semibold tracking-widest mt-1">Kerala &middot; U.A.E</span>
       </span>
     </a>
-    <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-deskly-text">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="courses.html" class="nav-link">Courses</a>
-      <a href="faculty.html" class="nav-link">Faculty</a>
-      <a href="careers.html" class="nav-link">Careers</a>
-      <a href="contact.html" class="nav-link active">Contact</a>
+    <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-deskly-ink">
+      <a href="index.html" class="nav-link hover:text-deskly-lime">Home</a>
+      <a href="about.html" class="nav-link hover:text-deskly-lime">About</a>
+      <a href="courses.html" class="nav-link hover:text-deskly-lime">Courses</a>
+      <a href="faculty.html" class="nav-link hover:text-deskly-lime">Faculty</a>
+      <a href="careers.html" class="nav-link hover:text-deskly-lime">Careers</a>
+      <a href="contact.html" class="nav-link text-deskly-lime font-semibold border-b-2 border-deskly-lime pb-1">Contact</a>
     </nav>
     <div class="hidden lg:block">
-      <a href="enquiry.html" class="inline-flex items-center gap-2 bg-deskly-orange text-white font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-deskly-orange-hover shadow-sm hover:shadow-md transition-all">Student Enquiry</a>
+      <a href="enquiry.html" class="inline-flex items-center gap-2 bg-deskly-ink text-white font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-deskly-ink-light transition-all">
+        Student Enquiry 
+        <span class="w-5 h-5 rounded-full bg-deskly-lime flex items-center justify-center text-deskly-ink shrink-0">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </span>
+      </a>
     </div>
     <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden text-deskly-ink p-2">
       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h18M4 13h18M4 19h18"/></svg>
@@ -70,132 +74,171 @@
       <a href="courses.html" class="hover:text-deskly-ink">Courses</a>
       <a href="faculty.html" class="hover:text-deskly-ink">Faculty</a>
       <a href="careers.html" class="hover:text-deskly-ink">Careers</a>
-      <a href="contact.html" class="text-deskly-orange">Contact</a>
-      <a href="enquiry.html" class="inline-block bg-deskly-orange text-white font-semibold text-center px-5 py-3 rounded-full mt-2">Student Enquiry</a>
+      <a href="contact.html" class="text-deskly-lime">Contact</a>
+      <a href="enquiry.html" class="inline-block bg-deskly-ink text-white font-semibold text-center px-5 py-3 rounded-full mt-2">Student Enquiry</a>
     </div>
   </div>
 </header>
 
-<section class="bg-deskly-surface bg-pattern py-20 sm:py-28 border-b border-deskly-border">
-  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center relative z-10">
-    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-deskly-border text-xs font-semibold text-deskly-orange mb-6 shadow-sm uppercase tracking-wider">
-      Contact
-    </span>
-    <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-deskly-ink leading-tight">Reach the office that's closer to you</h1>
+<section class="bg-deskly-surface pt-20 pb-12 sm:pt-28 sm:pb-16">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <div class="inline-flex items-center gap-2 mb-6">
+      <span class="w-2 h-2 rounded-full bg-deskly-lime"></span>
+      <span class="font-display font-bold uppercase tracking-wider text-[11px] text-deskly-ink">Reach out to us</span>
+    </div>
+    <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-deskly-ink leading-tight">Reach the office that's <br>closer to you</h1>
   </div>
 </section>
 
-<section class="grid md:grid-cols-2 bg-white">
-  <div class="px-8 sm:px-16 py-20 border-b md:border-b-0 md:border-r border-deskly-border relative overflow-hidden group">
-    <div class="absolute inset-0 bg-deskly-orange/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-    <div class="relative z-10">
-      <div class="w-14 h-14 rounded-2xl bg-deskly-orange/10 flex items-center justify-center mb-8">
-        <svg class="w-6 h-6 text-deskly-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-      </div>
-      <span class="text-deskly-orange font-bold uppercase tracking-wider text-xs">Kerala Branch</span>
-      <h3 class="font-display text-3xl font-bold text-deskly-ink mt-4">Golden Tech Travels &amp; Tourism</h3>
-      <p class="text-deskly-text text-lg mt-4 leading-relaxed max-w-sm">2nd Floor, MG Road<br>Kozhikode, Kerala 673001, India</p>
+<!-- The New Address Section (Matching the Testimonial/Feature Card style from screenshot) -->
+<section class="pb-20 bg-deskly-surface">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
       
-      <div class="mt-8 space-y-3">
-        <p class="flex items-center gap-3 text-deskly-ink font-medium">
-          <svg class="w-5 h-5 text-deskly-text" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-          +91 98XXX XXXXX
-        </p>
-        <p class="flex items-center gap-3 text-deskly-ink font-medium">
-          <svg class="w-5 h-5 text-deskly-text" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-          kerala@goldentechgroup.in
-        </p>
-      </div>
-      <div class="mt-8 pt-8 border-t border-deskly-border/50">
-        <p class="text-deskly-text text-sm font-medium flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          Mon–Sat, 9:30 AM – 6:30 PM
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="px-8 sm:px-16 py-20 border-b border-deskly-border relative overflow-hidden group">
-    <div class="absolute inset-0 bg-deskly-accent-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-    <div class="relative z-10">
-      <div class="w-14 h-14 rounded-2xl bg-deskly-accent-blue/10 flex items-center justify-center mb-8">
-        <svg class="w-6 h-6 text-deskly-accent-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-      </div>
-      <span class="text-deskly-accent-blue font-bold uppercase tracking-wider text-xs">UAE Branch</span>
-      <h3 class="font-display text-3xl font-bold text-deskly-ink mt-4">Golden Tech Documentation Services</h3>
-      <p class="text-deskly-text text-lg mt-4 leading-relaxed max-w-sm">Al Ain, Abu Dhabi, United Arab Emirates</p>
-      
-      <div class="mt-8 space-y-3">
-        <p class="flex items-center gap-3 text-deskly-ink font-medium">
-          <svg class="w-5 h-5 text-deskly-text" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-          +971 5X XXX XXXX
-        </p>
-        <p class="flex items-center gap-3 text-deskly-ink font-medium">
-          <svg class="w-5 h-5 text-deskly-text" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-          info@goldentechgroup.ae
-        </p>
-      </div>
-      <div class="mt-8 pt-8 border-t border-deskly-border/50">
-        <p class="text-deskly-text text-sm font-medium flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          Sat–Thu, 9:00 AM – 6:00 PM
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT FORM -->
-<section class="py-24 bg-deskly-surface">
-  <div class="max-w-3xl mx-auto px-5 sm:px-8">
-    <div class="text-center mb-12">
-      <span class="text-deskly-orange font-semibold tracking-wider uppercase text-sm">Send a message</span>
-      <h2 class="font-display text-3xl sm:text-4xl font-bold text-deskly-ink mt-4">We usually reply within one working day</h2>
-    </div>
-    
-    <form id="contact-form" novalidate class="bg-white rounded-3xl p-8 sm:p-12 border border-deskly-border shadow-soft space-y-6">
-      <div>
-        <label for="name" class="block text-sm font-semibold text-deskly-ink mb-2">Full Name <span class="text-deskly-orange">*</span></label>
-        <input id="name" name="name" type="text" required class="w-full rounded-xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-orange focus:ring-2 focus:ring-deskly-orange/20 outline-none transition-all bg-deskly-surface">
-        <p data-error-for="name" class="hidden text-xs text-red-500 mt-2 font-medium">Please enter your name.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-6">
+      <!-- Kerala Card (Custom cut corner style: rounded-tl-[2rem] rounded-tr-[2rem] rounded-bl-[2rem] rounded-br-[0.5rem]) -->
+      <div class="bg-white rounded-tl-[2.5rem] rounded-tr-[2.5rem] rounded-bl-[2.5rem] rounded-br-[0.5rem] p-8 sm:p-12 shadow-soft flex flex-col justify-between">
         <div>
-          <label for="email" class="block text-sm font-semibold text-deskly-ink mb-2">Email <span class="text-deskly-orange">*</span></label>
-          <input id="email" name="email" type="email" required class="w-full rounded-xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-orange focus:ring-2 focus:ring-deskly-orange/20 outline-none transition-all bg-deskly-surface">
-          <p data-error-for="email" class="hidden text-xs text-red-500 mt-2 font-medium">Please enter a valid email.</p>
+          <div class="inline-flex items-center gap-2 mb-8 bg-deskly-lime/20 px-4 py-2 rounded-full">
+            <span class="text-deskly-ink font-bold uppercase tracking-widest text-[10px]">Kerala Branch</span>
+          </div>
+          <h3 class="font-display text-3xl font-bold text-deskly-ink mb-6">Travels &amp; Tourism</h3>
+          <p class="text-deskly-text text-lg leading-relaxed mb-10">2nd Floor, MG Road<br>Kozhikode, Kerala 673001, India</p>
+          
+          <div class="space-y-4">
+            <p class="flex items-center gap-4 text-deskly-ink font-semibold">
+              <span class="w-10 h-10 rounded-full bg-deskly-surface flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              </span>
+              +91 98XXX XXXXX
+            </p>
+            <p class="flex items-center gap-4 text-deskly-ink font-semibold">
+              <span class="w-10 h-10 rounded-full bg-deskly-surface flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </span>
+              kerala@goldentechgroup.in
+            </p>
+          </div>
         </div>
-        <div>
-          <label for="phone" class="block text-sm font-semibold text-deskly-ink mb-2">Phone <span class="text-deskly-orange">*</span></label>
-          <input id="phone" name="phone" type="tel" required class="w-full rounded-xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-orange focus:ring-2 focus:ring-deskly-orange/20 outline-none transition-all bg-deskly-surface">
-          <p data-error-for="phone" class="hidden text-xs text-red-500 mt-2 font-medium">Please enter a valid phone number.</p>
+        <div class="mt-12 pt-6 border-t border-deskly-border">
+          <p class="text-deskly-text text-sm font-semibold flex items-center gap-2">
+            <svg class="w-4 h-4 text-deskly-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Mon–Sat, 9:30 AM – 6:30 PM
+          </p>
         </div>
       </div>
-      <div>
-        <label for="subject" class="block text-sm font-semibold text-deskly-ink mb-2">Subject <span class="text-deskly-orange">*</span></label>
-        <select id="subject" name="subject" required class="w-full rounded-xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-orange focus:ring-2 focus:ring-deskly-orange/20 outline-none transition-all bg-deskly-surface appearance-none">
-          <option value="">Select a topic</option>
-          <option>UAE Documentation &amp; Typing</option>
-          <option>Kerala Travel &amp; Tourism</option>
-          <option>Typing Course Enquiry</option>
-          <option>Interview Placement</option>
-          <option>Careers</option>
-          <option>Other</option>
-        </select>
-        <p data-error-for="subject" class="hidden text-xs text-red-500 mt-2 font-medium">Please select a subject.</p>
+
+      <!-- UAE Card -->
+      <div class="bg-white rounded-tl-[2.5rem] rounded-tr-[2.5rem] rounded-bl-[2.5rem] rounded-br-[0.5rem] p-8 sm:p-12 shadow-soft flex flex-col justify-between">
+        <div>
+          <div class="inline-flex items-center gap-2 mb-8 bg-deskly-lime/20 px-4 py-2 rounded-full">
+            <span class="text-deskly-ink font-bold uppercase tracking-widest text-[10px]">UAE Branch</span>
+          </div>
+          <h3 class="font-display text-3xl font-bold text-deskly-ink mb-6">Documentation Services</h3>
+          <p class="text-deskly-text text-lg leading-relaxed mb-10">Al Ain, Abu Dhabi<br>United Arab Emirates</p>
+          
+          <div class="space-y-4">
+            <p class="flex items-center gap-4 text-deskly-ink font-semibold">
+              <span class="w-10 h-10 rounded-full bg-deskly-surface flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              </span>
+              +971 5X XXX XXXX
+            </p>
+            <p class="flex items-center gap-4 text-deskly-ink font-semibold">
+              <span class="w-10 h-10 rounded-full bg-deskly-surface flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </span>
+              info@goldentechgroup.ae
+            </p>
+          </div>
+        </div>
+        <div class="mt-12 pt-6 border-t border-deskly-border">
+          <p class="text-deskly-text text-sm font-semibold flex items-center gap-2">
+            <svg class="w-4 h-4 text-deskly-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Sat–Thu, 9:00 AM – 6:00 PM
+          </p>
+        </div>
       </div>
-      <div>
-        <label for="message" class="block text-sm font-semibold text-deskly-ink mb-2">Message <span class="text-deskly-orange">*</span></label>
-        <textarea id="message" name="message" rows="5" required class="w-full rounded-xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-orange focus:ring-2 focus:ring-deskly-orange/20 outline-none transition-all bg-deskly-surface resize-none"></textarea>
-        <p data-error-for="message" class="hidden text-xs text-red-500 mt-2 font-medium">Please enter a message.</p>
-      </div>
-      <button type="submit" class="w-full bg-deskly-ink text-white font-bold py-4 rounded-xl hover:bg-deskly-text shadow-sm hover:shadow-md transition-all text-lg mt-4">Send Message</button>
-      <p id="contact-status" class="mt-4 text-sm font-medium text-center" role="status"></p>
-    </form>
+      
+    </div>
   </div>
 </section>
 
-<footer class="bg-white border-t border-deskly-border pt-20 pb-10">
+<!-- CONTACT FORM matching the new style -->
+<section class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8">
+    <div class="bg-deskly-ink rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem] rounded-br-[1rem] p-8 sm:p-14 lg:p-16 relative overflow-hidden">
+      <!-- subtle background element inside the dark card -->
+      <div class="absolute right-0 top-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+      
+      <div class="text-center mb-12 relative z-10">
+        <div class="inline-flex items-center gap-2 mb-4">
+          <span class="w-2 h-2 rounded-full bg-deskly-lime"></span>
+          <span class="text-white font-bold tracking-widest uppercase text-[11px]">Send a message</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">We'd love to hear from you</h2>
+      </div>
+      
+      <form id="contact-form" novalidate class="space-y-6 relative z-10">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label for="name" class="block text-sm font-semibold text-white/80">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="John Doe" required class="w-full rounded-xl border border-white/10 px-5 py-4 text-white placeholder-white/30 focus:border-deskly-lime focus:ring-1 focus:ring-deskly-lime outline-none transition-all bg-white/5 hover:bg-white/10">
+            <p data-error-for="name" class="hidden text-xs text-red-400 font-medium">Please enter your name.</p>
+          </div>
+          <div class="space-y-2">
+            <label for="email" class="block text-sm font-semibold text-white/80">Email</label>
+            <input id="email" name="email" type="email" placeholder="john@example.com" required class="w-full rounded-xl border border-white/10 px-5 py-4 text-white placeholder-white/30 focus:border-deskly-lime focus:ring-1 focus:ring-deskly-lime outline-none transition-all bg-white/5 hover:bg-white/10">
+            <p data-error-for="email" class="hidden text-xs text-red-400 font-medium">Please enter a valid email.</p>
+          </div>
+        </div>
+        
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label for="phone" class="block text-sm font-semibold text-white/80">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required class="w-full rounded-xl border border-white/10 px-5 py-4 text-white placeholder-white/30 focus:border-deskly-lime focus:ring-1 focus:ring-deskly-lime outline-none transition-all bg-white/5 hover:bg-white/10">
+            <p data-error-for="phone" class="hidden text-xs text-red-400 font-medium">Please enter a valid phone number.</p>
+          </div>
+          <div class="space-y-2">
+            <label for="subject" class="block text-sm font-semibold text-white/80">Subject</label>
+            <div class="relative">
+              <select id="subject" name="subject" required class="w-full rounded-xl border border-white/10 px-5 py-4 text-white focus:border-deskly-lime focus:ring-1 focus:ring-deskly-lime outline-none transition-all bg-[#151f33] hover:bg-[#1a263d] appearance-none cursor-pointer">
+                <option value="" disabled selected>Select a topic</option>
+                <option>UAE Documentation &amp; Typing</option>
+                <option>Kerala Travel &amp; Tourism</option>
+                <option>Typing Course Enquiry</option>
+                <option>Interview Placement</option>
+                <option>Careers</option>
+                <option>Other</option>
+              </select>
+              <div class="absolute inset-y-0 right-5 flex items-center pointer-events-none text-white/50">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </div>
+            </div>
+            <p data-error-for="subject" class="hidden text-xs text-red-400 font-medium">Please select a subject.</p>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label for="message" class="block text-sm font-semibold text-white/80">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required class="w-full rounded-xl border border-white/10 px-5 py-4 text-white placeholder-white/30 focus:border-deskly-lime focus:ring-1 focus:ring-deskly-lime outline-none transition-all bg-white/5 hover:bg-white/10 resize-none"></textarea>
+          <p data-error-for="message" class="hidden text-xs text-red-400 font-medium">Please enter a message.</p>
+        </div>
+
+        <div class="pt-6 flex justify-center">
+          <button type="submit" class="inline-flex items-center gap-3 bg-deskly-lime text-deskly-ink font-bold py-4 px-10 rounded-full hover:bg-deskly-lime-hover shadow-[0_0_20px_rgba(196,240,50,0.3)] transition-all text-lg hover:scale-105">
+            Submit Request
+            <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center shrink-0">
+              <svg class="w-3.5 h-3.5 text-deskly-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </span>
+          </button>
+        </div>
+        <p id="contact-status" class="mt-4 text-sm font-medium text-center text-white" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-deskly-surface border-t border-deskly-border pt-20 pb-10">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 grid gap-10 md:grid-cols-4 mb-16">
     <div>
       <div class="flex items-center gap-3 mb-6">

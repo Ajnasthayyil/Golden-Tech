@@ -2,12 +2,14 @@
 
 :root {
   --deskly-orange: #FF7340;
-  --deskly-orange-hover: #E85D2A;
-  --deskly-surface: #F9FAFB;
+  --deskly-lime: #C4F032;
+  --deskly-lime-hover: #b5e024;
+  --deskly-surface: #F4F5F5;
   --deskly-card: #FFFFFF;
-  --deskly-ink: #111827;
-  --deskly-text: #4B5563;
-  --deskly-border: #E5E7EB;
+  --deskly-ink: #0F172A;
+  --deskly-ink-light: #1E293B;
+  --deskly-text: #475569;
+  --deskly-border: #E2E8F0;
   --deskly-accent-blue: #3B82F6;
   --deskly-accent-green: #10B981;
 }
@@ -41,11 +43,11 @@ h1, h2, h3, h4, h5, h6, .font-display {
 .nav-link {
   position: relative;
   font-weight: 500;
-  color: var(--deskly-text);
+  color: var(--deskly-ink);
   transition: color 0.2s ease;
 }
 .nav-link:hover {
-  color: var(--deskly-ink);
+  color: var(--deskly-lime);
 }
 .nav-link::after {
   content: "";
@@ -54,7 +56,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: var(--deskly-orange);
+  background: var(--deskly-lime);
   transition: width 0.3s ease, left 0.3s ease;
 }
 .nav-link:hover::after, .nav-link.active::after {
@@ -62,7 +64,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
   left: 0;
 }
 .nav-link.active {
-  color: var(--deskly-orange);
+  color: var(--deskly-lime);
 }
 
 /* Mobile menu transition */
@@ -77,7 +79,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 /* Focus visibility for accessibility */
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--deskly-orange);
+  outline: 2px solid var(--deskly-lime);
   outline-offset: 2px;
 }
 
