@@ -33,6 +33,7 @@
     }
   }
 </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="font-body bg-deskly-surface text-deskly-text">
@@ -80,27 +81,44 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="py-12 sm:py-20 px-5 sm:px-8 max-w-7xl mx-auto">
-  <div class="bg-deskly-ink rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem] rounded-br-[1rem] p-12 sm:p-24 relative overflow-hidden text-center sm:text-left flex flex-col items-center sm:items-start">
+  <div class="rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem] rounded-br-[1rem] relative overflow-hidden text-center sm:text-left flex flex-col items-center sm:items-start bg-deskly-ink bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200');">
+    <div class="absolute inset-0 bg-gradient-to-r from-deskly-ink/90 via-deskly-ink/80 to-transparent pointer-events-none"></div>
     <div class="absolute right-0 top-0 w-96 h-96 bg-white opacity-[0.03] rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none"></div>
-    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 text-[11px] font-bold text-white mb-8 tracking-widest uppercase relative z-10">
-      <span class="w-2 h-2 rounded-full bg-deskly-lime"></span> Kerala &middot; UAE
-    </span>
-    <h1 class="font-display text-white text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.1] tracking-tight relative z-10">
-      Two countries.<br> One trusted name.
-    </h1>
-    <p class="text-white/80 mt-8 text-lg sm:text-xl max-w-2xl leading-relaxed relative z-10">
-      From visa and Emirates ID paperwork in the UAE to travel bookings and typing training in Kerala — Golden Tech Group handles the details so you don't have to.
-    </p>
-    <div class="mt-12 flex flex-wrap items-center gap-4 relative z-10 justify-center sm:justify-start">
-      <a href="enquiry.html" class="inline-flex items-center gap-3 bg-deskly-lime text-deskly-ink font-bold px-8 py-4 rounded-full hover:bg-deskly-lime-hover shadow-[0_0_20px_rgba(196,240,50,0.3)] transition-all text-lg hover:scale-105">
-        Start Your Enquiry
-        <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center shrink-0">
-          <svg class="w-3.5 h-3.5 text-deskly-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14M12 5l7 7-7 7"></path></svg>
-        </span>
-      </a>
-      <a href="courses.html" class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all text-lg backdrop-blur-sm">Explore Courses</a>
+    
+    <div class="p-12 sm:p-24 relative z-10 w-full">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 text-[11px] font-bold text-white mb-8 tracking-widest uppercase">
+        <span class="w-2 h-2 rounded-full bg-deskly-lime"></span> Kerala &middot; UAE
+      </span>
+      <h1 class="font-display text-white text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+        Two countries.<br> One trusted name.
+      </h1>
+      <p class="text-white/80 mt-8 text-lg sm:text-xl max-w-2xl leading-relaxed">
+        From visa and Emirates ID paperwork in the UAE to travel bookings and typing training in Kerala — Golden Tech Group handles the details so you don't have to.
+      </p>
+      <div class="mt-12 flex flex-wrap items-center gap-4 justify-center sm:justify-start">
+        <a href="enquiry.html" class="inline-flex items-center gap-3 bg-deskly-lime text-deskly-ink font-bold px-8 py-4 rounded-full hover:bg-deskly-lime-hover shadow-[0_0_20px_rgba(196,240,50,0.3)] transition-all text-lg hover:scale-105">
+          Start Your Enquiry
+          <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-arrow-right text-deskly-ink text-sm"></i>
+          </span>
+        </a>
+        <a href="courses.html" class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all text-lg backdrop-blur-sm">Explore Courses</a>
+      </div>
+    </div>
+
+    <!-- Right Bottom Info Card (like Dribbble reference) -->
+    <div class="hidden md:flex absolute bottom-0 right-0 bg-deskly-ink/95 backdrop-blur-md rounded-tl-[2rem] p-6 pr-12 pb-12 items-center gap-6 border-t border-l border-white/10">
+      <div class="flex -space-x-4">
+        <img class="w-12 h-12 rounded-full border-2 border-deskly-ink" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100" alt="Student">
+        <img class="w-12 h-12 rounded-full border-2 border-deskly-ink" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100&h=100" alt="Student">
+        <img class="w-12 h-12 rounded-full border-2 border-deskly-ink" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=100&h=100" alt="Student">
+        <div class="w-12 h-12 rounded-full border-2 border-deskly-ink bg-deskly-lime flex items-center justify-center text-deskly-ink font-bold text-xs">+</div>
+      </div>
+      <div>
+        <p class="text-white font-display font-bold text-2xl">1,500+</p>
+        <p class="text-white/60 text-xs font-medium">Students trained in typing</p>
+      </div>
     </div>
   </div>
 </section>
