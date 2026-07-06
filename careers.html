@@ -168,20 +168,20 @@
 
 <!-- APPLY FORM -->
 <section id="apply" class="py-24 bg-white">
-  <div class="max-w-2xl mx-auto px-5 sm:px-8">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
     <div class="text-center mb-12">
       <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-deskly-surface border border-deskly-border text-[11px] font-bold text-deskly-ink tracking-widest uppercase">
         <span class="w-2 h-2 rounded-full bg-deskly-lime"></span> Apply
       </span>
       <h2 class="font-display text-3xl sm:text-4xl font-bold text-deskly-ink mt-6">Send us your details</h2>
     </div>
-    <form id="career-form" novalidate class="bg-deskly-surface rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem] rounded-br-[1rem] p-8 sm:p-12 border border-deskly-border shadow-soft space-y-6">
-      <div>
-        <label for="c-name" class="block text-sm font-semibold text-deskly-ink mb-2">Full Name <span class="text-deskly-lime">*</span></label>
-        <input id="c-name" name="c-name" type="text" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white">
-        <p data-error-for="c-name" class="hidden text-xs text-red-500 mt-2 font-medium">Please enter your name.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-6">
+    <form id="career-form" novalidate class="space-y-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div>
+          <label for="c-name" class="block text-sm font-semibold text-deskly-ink mb-2">Full Name <span class="text-deskly-lime">*</span></label>
+          <input id="c-name" name="c-name" type="text" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white">
+          <p data-error-for="c-name" class="hidden text-xs text-red-500 mt-2 font-medium">Please enter your name.</p>
+        </div>
         <div>
           <label for="c-email" class="block text-sm font-semibold text-deskly-ink mb-2">Email <span class="text-deskly-lime">*</span></label>
           <input id="c-email" name="c-email" type="email" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white">
@@ -192,27 +192,27 @@
           <input id="c-phone" name="c-phone" type="tel" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white">
           <p data-error-for="c-phone" class="hidden text-xs text-red-500 mt-2 font-medium">Please enter a valid phone number.</p>
         </div>
-      </div>
-      <div>
-        <label for="c-role" class="block text-sm font-semibold text-deskly-ink mb-2">Position of Interest <span class="text-deskly-lime">*</span></label>
-        <div class="relative">
-          <select id="c-role" name="c-role" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white appearance-none">
-            <option value="">Select a role</option>
-            <option>Documentation Executive</option>
-            <option>Typing Instructor</option>
-            <option>Travel &amp; Tourism Counsellor</option>
-            <option>Front Office Executive</option>
-            <option>Other</option>
-          </select>
-          <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-deskly-text">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        <div>
+          <label for="c-role" class="block text-sm font-semibold text-deskly-ink mb-2">Position <span class="text-deskly-lime">*</span></label>
+          <div class="relative">
+            <select id="c-role" name="c-role" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white appearance-none">
+              <option value="">Select a role</option>
+              <option>Documentation Executive</option>
+              <option>Typing Instructor</option>
+              <option>Travel &amp; Tourism Counsellor</option>
+              <option>Front Office Executive</option>
+              <option>Other</option>
+            </select>
+            <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-deskly-text">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
           </div>
+          <p data-error-for="c-role" class="hidden text-xs text-red-500 mt-2 font-medium">Please select a role.</p>
         </div>
-        <p data-error-for="c-role" class="hidden text-xs text-red-500 mt-2 font-medium">Please select a role.</p>
       </div>
       <div>
         <label for="c-message" class="block text-sm font-semibold text-deskly-ink mb-2">Tell us about your experience</label>
-        <textarea id="c-message" name="c-message" rows="4" class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white resize-none"></textarea>
+        <textarea id="c-message" name="c-message" rows="3" class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white resize-none"></textarea>
       </div>
       <button type="submit" class="w-full bg-deskly-ink text-white font-bold py-4 rounded-full hover:bg-deskly-ink-light transition-all text-lg mt-4 inline-flex justify-center items-center gap-2">
         Submit Application

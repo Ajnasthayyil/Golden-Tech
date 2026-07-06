@@ -171,43 +171,37 @@
 
 <!-- CONTACT FORM matching the new style -->
 <section class="py-24 bg-white">
-  <div class="max-w-4xl mx-auto px-5 sm:px-8">
-    <div class="bg-deskly-ink rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem] rounded-br-[1rem] p-8 sm:p-14 lg:p-16 relative overflow-hidden">
-      <!-- subtle background element inside the dark card -->
-      <div class="absolute right-0 top-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
-      
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="relative overflow-hidden">
       <div class="text-center mb-12 relative z-10">
         <div class="inline-flex items-center gap-2 mb-4">
           <span class="w-2 h-2 rounded-full bg-deskly-lime"></span>
-          <span class="text-white font-bold tracking-widest uppercase text-[11px]">Send a message</span>
+          <span class="text-deskly-ink font-bold tracking-widest uppercase text-[11px]">Send a message</span>
         </div>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">We'd love to hear from you</h2>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-deskly-ink mt-2">We'd love to hear from you</h2>
       </div>
       
       <form id="contact-form" novalidate class="space-y-6 relative z-10">
-        <div class="grid sm:grid-cols-2 gap-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="space-y-2">
-            <label for="name" class="block text-sm font-semibold text-white/80">Full Name</label>
-            <input id="name" name="name" type="text" placeholder="John Doe" required class="w-full rounded-xl border border-white/10 px-5 py-4 text-white placeholder-white/30 focus:border-deskly-lime focus:ring-1 focus:ring-deskly-lime outline-none transition-all bg-white/5 hover:bg-white/10">
-            <p data-error-for="name" class="hidden text-xs text-red-400 font-medium">Please enter your name.</p>
+            <label for="name" class="block text-sm font-semibold text-deskly-ink">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="John Doe" required class="w-full rounded-xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-1 focus:ring-deskly-ink outline-none transition-all bg-white hover:border-deskly-ink/50">
+            <p data-error-for="name" class="hidden text-xs text-red-500 font-medium">Please enter your name.</p>
           </div>
           <div class="space-y-2">
-            <label for="email" class="block text-sm font-semibold text-white/80">Email</label>
-            <input id="email" name="email" type="email" placeholder="john@example.com" required class="w-full rounded-xl border border-white/10 px-5 py-4 text-white placeholder-white/30 focus:border-deskly-lime focus:ring-1 focus:ring-deskly-lime outline-none transition-all bg-white/5 hover:bg-white/10">
-            <p data-error-for="email" class="hidden text-xs text-red-400 font-medium">Please enter a valid email.</p>
-          </div>
-        </div>
-        
-        <div class="grid sm:grid-cols-2 gap-6">
-          <div class="space-y-2">
-            <label for="phone" class="block text-sm font-semibold text-white/80">Phone Number</label>
-            <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required class="w-full rounded-xl border border-white/10 px-5 py-4 text-white placeholder-white/30 focus:border-deskly-lime focus:ring-1 focus:ring-deskly-lime outline-none transition-all bg-white/5 hover:bg-white/10">
-            <p data-error-for="phone" class="hidden text-xs text-red-400 font-medium">Please enter a valid phone number.</p>
+            <label for="email" class="block text-sm font-semibold text-deskly-ink">Email</label>
+            <input id="email" name="email" type="email" placeholder="john@example.com" required class="w-full rounded-xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-1 focus:ring-deskly-ink outline-none transition-all bg-white hover:border-deskly-ink/50">
+            <p data-error-for="email" class="hidden text-xs text-red-500 font-medium">Please enter a valid email.</p>
           </div>
           <div class="space-y-2">
-            <label for="subject" class="block text-sm font-semibold text-white/80">Subject</label>
+            <label for="phone" class="block text-sm font-semibold text-deskly-ink">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required class="w-full rounded-xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-1 focus:ring-deskly-ink outline-none transition-all bg-white hover:border-deskly-ink/50">
+            <p data-error-for="phone" class="hidden text-xs text-red-500 font-medium">Please enter a valid phone number.</p>
+          </div>
+          <div class="space-y-2">
+            <label for="subject" class="block text-sm font-semibold text-deskly-ink">Subject</label>
             <div class="relative">
-              <select id="subject" name="subject" required class="w-full rounded-xl border border-white/10 px-5 py-4 text-white focus:border-deskly-lime focus:ring-1 focus:ring-deskly-lime outline-none transition-all bg-[#151f33] hover:bg-[#1a263d] appearance-none cursor-pointer">
+              <select id="subject" name="subject" required class="w-full rounded-xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-1 focus:ring-deskly-ink outline-none transition-all bg-white hover:border-deskly-ink/50 appearance-none cursor-pointer">
                 <option value="" disabled selected>Select a topic</option>
                 <option>UAE Documentation &amp; Typing</option>
                 <option>Kerala Travel &amp; Tourism</option>
@@ -216,18 +210,18 @@
                 <option>Careers</option>
                 <option>Other</option>
               </select>
-              <div class="absolute inset-y-0 right-5 flex items-center pointer-events-none text-white/50">
+              <div class="absolute inset-y-0 right-5 flex items-center pointer-events-none text-deskly-text">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
               </div>
             </div>
-            <p data-error-for="subject" class="hidden text-xs text-red-400 font-medium">Please select a subject.</p>
+            <p data-error-for="subject" class="hidden text-xs text-red-500 font-medium">Please select a subject.</p>
           </div>
         </div>
 
         <div class="space-y-2">
-          <label for="message" class="block text-sm font-semibold text-white/80">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required class="w-full rounded-xl border border-white/10 px-5 py-4 text-white placeholder-white/30 focus:border-deskly-lime focus:ring-1 focus:ring-deskly-lime outline-none transition-all bg-white/5 hover:bg-white/10 resize-none"></textarea>
-          <p data-error-for="message" class="hidden text-xs text-red-400 font-medium">Please enter a message.</p>
+          <label for="message" class="block text-sm font-semibold text-deskly-ink">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required class="w-full rounded-xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-1 focus:ring-deskly-ink outline-none transition-all bg-white hover:border-deskly-ink/50 resize-none"></textarea>
+          <p data-error-for="message" class="hidden text-xs text-red-500 font-medium">Please enter a message.</p>
         </div>
 
         <div class="pt-6 flex justify-center">
@@ -238,7 +232,7 @@
             </span>
           </button>
         </div>
-        <p id="contact-status" class="mt-4 text-sm font-medium text-center text-white" role="status"></p>
+        <p id="contact-status" class="mt-4 text-sm font-medium text-center text-deskly-ink" role="status"></p>
       </form>
     </div>
   </div>

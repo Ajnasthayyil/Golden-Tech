@@ -97,16 +97,15 @@
 </section>
 
 <section class="py-24 bg-white border-b border-deskly-border">
-  <div class="max-w-3xl mx-auto px-5 sm:px-8">
-    <form id="enquiry-form" novalidate class="bg-deskly-surface rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem] rounded-br-[1rem] p-8 sm:p-12 border border-deskly-border shadow-soft space-y-8">
-
-      <div>
-        <label for="s-name" class="block text-sm font-semibold text-deskly-ink mb-2">Full Name <span class="text-deskly-lime">*</span></label>
-        <input id="s-name" name="s-name" type="text" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white">
-        <p data-error-for="s-name" class="hidden text-xs text-red-500 mt-2 font-medium">Please enter your name.</p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 gap-6">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <form id="enquiry-form" novalidate class="space-y-8">
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div>
+          <label for="s-name" class="block text-sm font-semibold text-deskly-ink mb-2">Student Name <span class="text-deskly-lime">*</span></label>
+          <input id="s-name" name="s-name" type="text" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white">
+          <p data-error-for="s-name" class="hidden text-xs text-red-500 mt-2 font-medium">Please enter your name.</p>
+        </div>
         <div>
           <label for="s-phone" class="block text-sm font-semibold text-deskly-ink mb-2">Phone / WhatsApp <span class="text-deskly-lime">*</span></label>
           <input id="s-phone" name="s-phone" type="tel" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white">
@@ -117,27 +116,26 @@
           <input id="s-email" name="s-email" type="email" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white">
           <p data-error-for="s-email" class="hidden text-xs text-red-500 mt-2 font-medium">Please enter a valid email.</p>
         </div>
-      </div>
-
-      <div>
-        <label for="s-course" class="block text-sm font-semibold text-deskly-ink mb-2">Course You're Interested In <span class="text-deskly-lime">*</span></label>
-        <div class="relative">
-          <select id="s-course" name="s-course" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white appearance-none">
-            <option value="">Select a course</option>
-            <option>English Typing</option>
-            <option>Arabic Typing</option>
-            <option>UAE Government Document Typing</option>
-            <option>Desktop Publishing (DTP)</option>
-            <option>Tally ERP &amp; Basic Accounting</option>
-            <option>MS Office Essentials</option>
-            <option>Interview &amp; Soft Skills Prep</option>
-            <option>Not sure — please advise</option>
-          </select>
-          <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-deskly-text">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        <div>
+          <label for="s-course" class="block text-sm font-semibold text-deskly-ink mb-2">Course Interested In <span class="text-deskly-lime">*</span></label>
+          <div class="relative">
+            <select id="s-course" name="s-course" required class="w-full rounded-2xl border border-deskly-border px-5 py-4 text-deskly-text focus:border-deskly-ink focus:ring-2 focus:ring-deskly-ink/5 outline-none transition-all bg-white appearance-none">
+              <option value="">Select a course</option>
+              <option>English Typing</option>
+              <option>Arabic Typing</option>
+              <option>UAE Government Document Typing</option>
+              <option>Desktop Publishing (DTP)</option>
+              <option>Tally ERP &amp; Basic Accounting</option>
+              <option>MS Office Essentials</option>
+              <option>Interview &amp; Soft Skills Prep</option>
+              <option>Not sure — please advise</option>
+            </select>
+            <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-deskly-text">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
           </div>
+          <p data-error-for="s-course" class="hidden text-xs text-red-500 mt-2 font-medium">Please select a course.</p>
         </div>
-        <p data-error-for="s-course" class="hidden text-xs text-red-500 mt-2 font-medium">Please select a course.</p>
       </div>
 
       <div class="p-6 bg-white rounded-2xl border border-deskly-border">
