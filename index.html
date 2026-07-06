@@ -38,90 +38,131 @@
 </head>
 <body class="font-body bg-deskly-surface text-deskly-text">
 
-<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-deskly-border">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-20">
+<header id="main-header" class="fixed w-full top-0 z-50 bg-transparent transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-24">
     <a href="index.html" class="flex items-center gap-3">
-      <span class="w-11 h-11 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-none bg-deskly-ink flex items-center justify-center shrink-0">
-        <span class="font-display text-white text-xl font-bold">G</span>
+      <span class="w-11 h-11 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-none bg-white flex items-center justify-center shrink-0 logo-bg transition-colors">
+        <span class="font-display text-deskly-ink text-xl font-bold logo-text transition-colors">G</span>
       </span>
       <span class="flex flex-col leading-none">
-        <span class="font-display text-deskly-ink text-lg font-bold tracking-tight">Golden Tech</span>
+        <span class="font-display text-white text-lg font-bold tracking-tight site-title transition-colors">Golden Tech</span>
       </span>
     </a>
-    <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-deskly-ink">
-      <a href="index.html" class="nav-link text-deskly-lime font-semibold border-b-2 border-deskly-lime pb-1">Home</a>
-      <a href="about.html" class="nav-link hover:text-deskly-lime">About</a>
-      <a href="courses.html" class="nav-link hover:text-deskly-lime">Courses</a>
-      <a href="faculty.html" class="nav-link hover:text-deskly-lime">Faculty</a>
-      <a href="careers.html" class="nav-link hover:text-deskly-lime">Careers</a>
-      <a href="contact.html" class="nav-link hover:text-deskly-lime">Contact</a>
+    <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-white/90 nav-links transition-colors">
+      <a href="index.html" class="text-deskly-lime bg-white/10 px-5 py-2 rounded-full font-semibold">Home</a>
+      <a href="about.html" class="hover:text-white transition-colors hover-target">About Us</a>
+      <a href="courses.html" class="hover:text-white transition-colors hover-target">Courses</a>
+      <a href="faculty.html" class="hover:text-white transition-colors hover-target">Faculty</a>
+      <a href="careers.html" class="hover:text-white transition-colors hover-target">Careers</a>
+      <a href="contact.html" class="hover:text-white transition-colors hover-target">Contact</a>
     </nav>
     <div class="hidden lg:block">
-      <a href="enquiry.html" class="inline-flex items-center gap-2 bg-deskly-ink text-white font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-deskly-ink-light transition-all">
-        Student Enquiry 
-        <span class="w-5 h-5 rounded-full bg-deskly-lime flex items-center justify-center text-deskly-ink shrink-0">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+      <a href="enquiry.html" class="inline-flex items-center gap-2 bg-deskly-lime text-deskly-ink font-bold text-sm px-6 py-3 rounded-full hover:bg-deskly-lime-hover shadow-[0_0_20px_rgba(196,240,50,0.3)] transition-all">
+        Student Enquiry
+        <span class="w-5 h-5 rounded-full bg-deskly-ink flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14M12 5l7 7-7 7"></path></svg>
         </span>
       </a>
     </div>
-    <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden text-deskly-ink p-2">
+    <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden text-white p-2 transition-colors">
       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h18M4 13h18M4 19h18"/></svg>
     </button>
   </div>
-  <div id="mobile-menu" class="lg:hidden bg-white border-t border-deskly-border">
+  <div id="mobile-menu" class="lg:hidden bg-white hidden border-t border-deskly-border shadow-lg">
     <div class="px-5 py-4 flex flex-col gap-4 font-medium text-deskly-text">
-      <a href="index.html" class="text-deskly-lime">Home</a>
-      <a href="about.html" class="hover:text-deskly-ink">About</a>
+      <a href="index.html" class="text-deskly-lime font-bold">Home</a>
+      <a href="about.html" class="hover:text-deskly-ink">About Us</a>
       <a href="courses.html" class="hover:text-deskly-ink">Courses</a>
       <a href="faculty.html" class="hover:text-deskly-ink">Faculty</a>
       <a href="careers.html" class="hover:text-deskly-ink">Careers</a>
       <a href="contact.html" class="hover:text-deskly-ink">Contact</a>
-      <a href="enquiry.html" class="inline-block bg-deskly-ink text-white font-semibold text-center px-5 py-3 rounded-full mt-2">Student Enquiry</a>
+      <a href="enquiry.html" class="inline-block bg-deskly-lime text-deskly-ink font-bold text-center px-5 py-3 rounded-full mt-2">Student Enquiry</a>
     </div>
   </div>
 </header>
 
-<section class="py-12 sm:py-20 px-5 sm:px-8 max-w-7xl mx-auto">
-  <div class="rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem] rounded-br-[1rem] relative overflow-hidden text-center sm:text-left flex flex-col items-center sm:items-start bg-deskly-ink bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200');">
-    <div class="absolute inset-0 bg-gradient-to-r from-deskly-ink/90 via-deskly-ink/80 to-transparent pointer-events-none"></div>
-    <div class="absolute right-0 top-0 w-96 h-96 bg-white opacity-[0.03] rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none"></div>
-    
-    <div class="p-12 sm:p-24 relative z-10 w-full">
-      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 text-[11px] font-bold text-white mb-8 tracking-widest uppercase">
-        <span class="w-2 h-2 rounded-full bg-deskly-lime"></span> Kerala &middot; UAE
-      </span>
-      <h1 class="font-display text-white text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+<section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2000');"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-deskly-ink/80 via-deskly-ink/50 to-transparent"></div>
+  <div class="absolute inset-0 bg-deskly-ink/10 mix-blend-multiply"></div>
+  
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10 w-full grid lg:grid-cols-12 gap-12 items-end h-full mt-12">
+    <!-- Left Content -->
+    <div class="lg:col-span-8 pb-12 lg:pb-0">
+      <h1 class="font-display text-white text-5xl sm:text-7xl lg:text-[5rem] font-bold leading-[1.05] tracking-tight mb-6 max-w-3xl">
         Two countries.<br> One trusted name.
       </h1>
-      <p class="text-white/80 mt-8 text-lg sm:text-xl max-w-2xl leading-relaxed">
-        From visa and Emirates ID paperwork in the UAE to travel bookings and typing training in Kerala — Golden Tech Group handles the details so you don't have to.
+      <p class="text-white/90 text-lg sm:text-xl max-w-2xl leading-relaxed mb-10 font-medium">
+        Access comprehensive documentation, trusted typing services, and travel coordination between Kerala and the UAE. Step into your next career with our dedicated typing training and placement support today.
       </p>
-      <div class="mt-12 flex flex-wrap items-center gap-4 justify-center sm:justify-start">
-        <a href="enquiry.html" class="inline-flex items-center gap-3 bg-deskly-lime text-deskly-ink font-bold px-8 py-4 rounded-full hover:bg-deskly-lime-hover shadow-[0_0_20px_rgba(196,240,50,0.3)] transition-all text-lg hover:scale-105">
+      
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="enquiry.html" class="inline-flex items-center gap-3 bg-deskly-lime text-deskly-ink font-bold px-8 py-4 rounded-full hover:bg-deskly-lime-hover transition-all text-lg hover:scale-105 shadow-[0_0_20px_rgba(196,240,50,0.4)]">
           Start Your Enquiry
-          <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-arrow-right text-deskly-ink text-sm"></i>
+          <span class="w-6 h-6 rounded-full bg-deskly-ink flex items-center justify-center shrink-0">
+            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14M12 5l7 7-7 7"></path></svg>
           </span>
         </a>
-        <a href="courses.html" class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all text-lg backdrop-blur-sm">Explore Courses</a>
+        <a href="courses.html" class="inline-flex items-center gap-2 border border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all text-lg backdrop-blur-sm">
+          Explore Our Services
+        </a>
       </div>
     </div>
-
-    <!-- Right Bottom Info Card (like Dribbble reference) -->
-    <div class="hidden md:flex absolute bottom-0 right-0 bg-deskly-ink/95 backdrop-blur-md rounded-tl-[2rem] p-6 pr-12 pb-12 items-center gap-6 border-t border-l border-white/10">
-      <div class="flex -space-x-4">
-        <img class="w-12 h-12 rounded-full border-2 border-deskly-ink" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100" alt="Student">
-        <img class="w-12 h-12 rounded-full border-2 border-deskly-ink" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100&h=100" alt="Student">
-        <img class="w-12 h-12 rounded-full border-2 border-deskly-ink" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=100&h=100" alt="Student">
-        <div class="w-12 h-12 rounded-full border-2 border-deskly-ink bg-deskly-lime flex items-center justify-center text-deskly-ink font-bold text-xs">+</div>
-      </div>
-      <div>
-        <p class="text-white font-display font-bold text-2xl">1,500+</p>
-        <p class="text-white/60 text-xs font-medium">Students trained in typing</p>
-      </div>
+    
+    <!-- Right Stats Glassmorphic Cards (Removed as requested) -->
+    <div class="lg:col-span-4 flex flex-col gap-6 justify-end pb-8 lg:pb-16 hidden">
     </div>
   </div>
 </section>
+
+<!-- Scroll Effect Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('main-header');
+    if (!header) return;
+    const logoBg = header.querySelector('.logo-bg');
+    const logoText = header.querySelector('.logo-text');
+    const siteTitle = header.querySelector('.site-title');
+    const navLinksContainer = header.querySelector('.nav-links');
+    const menuBtn = document.getElementById('menu-btn');
+    const hoverTargets = header.querySelectorAll('.hover-target');
+
+    function handleScroll() {
+      if (window.scrollY > 50) {
+        header.classList.remove('bg-transparent', 'py-2');
+        header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+        
+        logoBg.classList.replace('bg-white', 'bg-deskly-ink');
+        logoText.classList.replace('text-deskly-ink', 'text-white');
+        siteTitle.classList.replace('text-white', 'text-deskly-ink');
+        navLinksContainer.classList.replace('text-white/90', 'text-deskly-text');
+        menuBtn.classList.replace('text-white', 'text-deskly-ink');
+        
+        hoverTargets.forEach(link => {
+          link.classList.replace('hover:text-white', 'hover:text-deskly-lime');
+        });
+      } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+        header.classList.add('bg-transparent');
+        
+        logoBg.classList.replace('bg-deskly-ink', 'bg-white');
+        logoText.classList.replace('text-white', 'text-deskly-ink');
+        siteTitle.classList.replace('text-deskly-ink', 'text-white');
+        navLinksContainer.classList.replace('text-deskly-text', 'text-white/90');
+        menuBtn.classList.replace('text-deskly-ink', 'text-white');
+        
+        hoverTargets.forEach(link => {
+          link.classList.replace('hover:text-deskly-lime', 'hover:text-white');
+        });
+      }
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    // Init state
+    handleScroll();
+  });
+</script>
 
 <!-- ABOUT US -->
 <section class="py-24 bg-white border-y border-deskly-border overflow-hidden">
